@@ -6,13 +6,11 @@ import (
 	"net/http"
 )
 
-func main() {
-	
+func main() {	
 	client := &http.Client{}
 	req, _ := http.NewRequest("GET", "http://http-theft-bank.gtainccnu.muxixyz.com/api/v1/organization/code", nil)
-	req.Header.Add("Code", "123")
+	req.Header.Add("Code", "120")
 	res, _ := client.Do(req)
 	by, _ := ioutil.ReadAll(res.Body)
-	fmt.Println(string(by))
-	
+	fmt.Println(string(by))	
 }
